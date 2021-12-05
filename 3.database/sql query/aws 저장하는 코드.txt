@@ -1,0 +1,62 @@
+user="root"
+password="abcd1234"
+url="jdbc:mysql://localhost:3306/mysql"
+driver="com.mysql.cj.jdbc.Driver"
+dbtable="DONGJAK"
+
+LOAD DATA INFILE '/ubuntu/data/dongjak_rest.csv' 
+INTO TABLE DONGJAK
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(@ID,@기준일,@시군구코드,@행정구역(구별),@총생활인구수,@주간인구수09_18, @야간인구수19_08)
+SET ID = @id, 
+sigungucode = @시군구코드,
+gubyull = @시군구코드,
+sangtae = @,
+enddate = @,
+uptae = @,
+space = @야간인구수19_08,
+address = @지번주소,
+x_info = @좌표정보(X),
+y_info = @좌표정보(Y),
+
+전처리한변수명.write.jdbc('jdbc:mysql://localhost:3306/mysql', '만들 테이블명', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+
+
+
+seoul_pop = spark.read.format('csv').option('header','true').load('data/seoul_pop.csv', encoding='UTF-8')
+gangdong.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GANGDONG', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+
+
+
+
+
+dongjak = spark.read.format('csv').option('header', 'true').load('data/dongjak.csv', encoding='UTF-8')
+dongjak.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'DONGJAK', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+gangdong = spark.read.format('csv').option('header', 'true').load('data/gangdong.csv', encoding='UTF-8')
+gangdong.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GANGDONG', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+youngdeungpo = spark.read.format('csv').option('header', 'true').load('data/youngdeungpo.csv', encoding='UTF-8')
+youngdeungpo.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'YOUNGDEUNGPO', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+songpa = spark.read.format('csv').option('header', 'true').load('data/songpa.csv', encoding='UTF-8')
+songpa.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'SONGPA', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+seocho = spark.read.format('csv').option('header', 'true').load('data/seocho.csv', encoding='UTF-8')
+seocho.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'SEOCHO', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+gwanak = spark.read.format('csv').option('header', 'true').load('data/gwanak.csv', encoding='UTF-8')
+gwanak.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GWANAK', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+guro = spark.read.format('csv').option('header', 'true').load('data/guro.csv', encoding='UTF-8')
+guro.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GURO', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+geumchon = spark.read.format('csv').option('header', 'true').load('data/geumchon.csv', encoding='UTF-8')
+geumchon.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GEUMCHON', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})
+
+gangnam = spark.read.format('csv').option('header', 'true').load('data/gangnam.csv', encoding='UTF-8')
+gangnam.write.jdbc('jdbc:mysql://localhost:3306/IMULCAMU', 'GANGNAM', 'append', properties={'driver':'com.mysql.cj.jdbc.Driver','user':'root','password':'1234'})

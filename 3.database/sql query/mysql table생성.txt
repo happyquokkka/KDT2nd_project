@@ -1,0 +1,107 @@
+CREATE TABLE DONGJAKGU (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20),
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE GANGDONGGU (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE GANGNAMGU (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE GEUMCHON (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE GURO (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE GWANAK (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE SEOCHO (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE SONGPA (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));
+
+CREATE TABLE YOUNGDEUNGPO (
+ID INT NOT NULL PRIMARY KEY,
+sigungucode CHAR(20) NOT NULL,
+gubyull CHAR(20) NOT NULL,
+sangtae CHAR(20) NOT NULL,
+enddate CHAR(20),
+uptae CHAR(20) NOT NULL,
+space CHAR(20) NOT NULL,
+address CHAR(20) NOT NULL,
+x_info CHAR(20),
+y_info CHAR(20));

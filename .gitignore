@@ -1,0 +1,7 @@
+# 기타 폴더 제외
+/etc/
+
+# 용량이 큰 csv 제외
+1.data/seoul_restaurant.csv
+1.data/서울특별시 일반음식점 인허가 정보 - 복사본.csv
+1.data/kiyou/
